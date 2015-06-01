@@ -1,7 +1,7 @@
-<h1>Tickets</h1>
+<h1>Queue</h1>
 
 <ul>
   <% @tickets.each do |ticket| %>
-    <li><%= ticket.description %></li>
+    <li><%= link_to ticket.description, ticket_path(ticket) %></li>
   <% end %>
 </ul>
