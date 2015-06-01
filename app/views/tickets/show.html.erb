@@ -3,5 +3,12 @@
 <h3><%= @ticket.description %></h3>
 
 <p>
+  <%= link_to "Edit", edit_ticket_path(@ticket) %> |
+  <%= link_to "Delete", ticket_path(@ticket), 
+                        data: {confirm: "Are you sure?",
+                                method: "delete"}%>
+</p>
+
+<p>
   <%= link_to "Return to queue", tickets_path %>
 </p>
