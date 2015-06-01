@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>PcmQueue</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= yield(:title) %></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
 
-  <%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
