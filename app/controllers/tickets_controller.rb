@@ -1,6 +1,7 @@
 class TicketsController < ApplicationController
   def index
-    @tickets = Ticket.all.order('tickets.created_at ASC')
+    @incomplete_tickets = Ticket.all.where(complete: false).order('tickets.created_at ASC')
+    @complete_tickets = Ticket.all.where(complete: true).order('tickets.created_at ASC')
   end
 
   def show
@@ -44,6 +45,6 @@ class TicketsController < ApplicationController
 
 private
   def ticket_params
-    params.require(:ticket).permit(:description)
+    params.require(:ticket).permit(:description, :complete)
   end
 end

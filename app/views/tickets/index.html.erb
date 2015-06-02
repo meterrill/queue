@@ -2,8 +2,22 @@
 
 <h1>Queue</h1>
 
+<p>
+  <%= link_to "New Ticket", new_ticket_path, id: "new_link" %>
+</p>
+
+<h3>Active Tickets</h3>
+
 <ul>
-  <% @tickets.each do |ticket| %>
+  <% @incomplete_tickets.each do |ticket| %>
+    <li><%= link_to ticket.description, ticket_path(ticket) %></li>
+  <% end %>
+</ul>
+
+<h3>Completed Tickets</h3>
+
+<ul>
+  <% @complete_tickets.each do |ticket| %>
     <li><%= link_to ticket.description, ticket_path(ticket) %></li>
   <% end %>
 </ul>
