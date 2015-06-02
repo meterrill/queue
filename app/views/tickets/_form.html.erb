@@ -1,6 +1,6 @@
 <%= render 'layouts/errors', object: @ticket %>
 
-<%= form_for @ticket do |f| %>
+<%= form_for @ticket, remote: true do |f| %>
   <%= f.label :description %>
   <%= f.text_field :description %>
   <%= f.submit %>

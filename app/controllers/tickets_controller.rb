@@ -1,7 +1,7 @@
 class TicketsController < ApplicationController
   def index
-    @incomplete_tickets = Ticket.all.where(complete: false).order('tickets.created_at ASC')
-    @complete_tickets = Ticket.all.where(complete: true).order('tickets.created_at ASC')
+    @incomplete_tickets = Ticket.where(complete: false).order('tickets.created_at ASC')
+    @complete_tickets = Ticket.where(complete: true).order('tickets.created_at ASC')
   end
 
   def show
@@ -16,7 +16,10 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(ticket_params)
     if @ticket.save
       flash[:notice] = "Ticket successfully added!"
-      redirect_to tickets_path
+      respond_to do |format|
+        format.html { redirect_to tickets_path }
+        format.js
+      end
     else
       render :new
     end
