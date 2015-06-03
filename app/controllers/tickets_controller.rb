@@ -33,7 +33,10 @@ class TicketsController < ApplicationController
     @ticket = Ticket.find(params[:id])
     if @ticket.update(ticket_params)
       flash[:notice] = "Ticket successfully updated!"
-      redirect_to tickets_path
+      respond_to do |format|
+        format.html { redirect_to tickets_path }
+        format.js
+      end
     else
       render :edit
     end

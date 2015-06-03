@@ -1,3 +1,4 @@
 $('#new_ticket').remove();
 $('#new_link').show();
 $('#incomplete_tickets').append('<%= j render(@ticket) %>');
+$('#edit_ticket_<%= @ticket.id %>').submitOnCheck();

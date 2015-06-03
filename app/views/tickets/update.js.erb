@@ -1,0 +1,5 @@
+<% if @ticket.complete? %>
+  $('#edit_ticket_<%= @ticket.id %>').appendTo('#complete_tickets');
+<% else %>
+  $('#edit_ticket_<%= @ticket.id %>').appendTo('#incomplete_tickets');
+<% end %>
