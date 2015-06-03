@@ -1,4 +1,6 @@
 <%= form_for ticket, remote: true do |f| %>
+  <%= f.check_box :complete %>
+  <%= f.submit "Update" %>
   <%= f.label :complete, ticket.description %> |
   <%= link_to "Delete", ticket,
                         data: {confirm: "Are you sure?", method: :delete},
