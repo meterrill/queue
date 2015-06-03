@@ -14,14 +14,10 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(ticket_params)
-    if @ticket.save
-      flash[:notice] = "Ticket successfully added!"
-      respond_to do |format|
-        format.html { redirect_to tickets_path }
-        format.js
-      end
-    else
-      render :new
+    @ticket.save
+    respond_to do |format|
+      format.html { redirect_to tickets_path }
+      format.js
     end
   end
 
@@ -31,21 +27,16 @@ class TicketsController < ApplicationController
 
   def update
     @ticket = Ticket.find(params[:id])
-    if @ticket.update(ticket_params)
-      flash[:notice] = "Ticket successfully updated!"
-      respond_to do |format|
-        format.html { redirect_to tickets_path }
-        format.js
-      end
-    else
-      render :edit
+    @ticket.update(ticket_params)
+    respond_to do |format|
+      format.html { redirect_to tickets_path }
+      format.js
     end
   end
 
   def destroy
     @ticket = Ticket.find(params[:id])
     @ticket.destroy
-    flash[:notice] = "Ticket successfully deleted."
     respond_to do |format|
       format.html { redirect_to tickets_path }
       format.js
