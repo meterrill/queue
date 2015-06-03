@@ -43,7 +43,10 @@ class TicketsController < ApplicationController
     @ticket = Ticket.find(params[:id])
     @ticket.destroy
     flash[:notice] = "Ticket successfully deleted."
-    redirect_to tickets_path
+    respond_to do |format|
+      format.html { redirect_to tickets_path }
+      format.js
+    end
   end
 
 private

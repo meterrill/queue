@@ -1,3 +1,6 @@
 <%= form_for ticket, remote: true do |f| %>
-  <%= f.label :complete, ticket.description %>
+  <%= f.label :complete, ticket.description %> |
+  <%= link_to "Delete", ticket,
+                        data: {confirm: "Are you sure?", method: :delete},
+                        remote: true %>
 <% end %>
