@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <title><%= yield(:title) %></title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <div id="container">
+      <div id="header">
+        <%= image_tag("logo.png", id: "logo") %>
+        <h1>PCM Queue</h1>
+      </div>
 
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
 
-    <%= yield %>
+      <%= yield %>
 
+    </div>
   </body>
 </html>

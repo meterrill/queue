@@ -1,17 +1,17 @@
 <% content_for(:title, "PCM queue") %>
 
-<h1>Queue</h1>
+<div id="content">
+  <p>
+    <%= link_to "New Ticket", new_ticket_path, id: "new_link", remote: true %>
+  </p>
 
-<p>
-  <%= link_to "New Ticket", new_ticket_path, id: "new_link", remote: true %>
-</p>
+  <h3>Active Tickets</h3>
+  <div id="incomplete_tickets">
+    <%= render @incomplete_tickets %>
+  </div>
 
-<h3>Active Tickets</h3>
-<div id="incomplete_tickets">
-  <%= render @incomplete_tickets %>
-</div>
-
-<h3>Completed Tickets</h3>
-<div id="complete_tickets">
-  <%= render @complete_tickets %>
+  <h3>Completed Tickets</h3>
+  <div id="complete_tickets">
+    <%= render @complete_tickets %>
+  </div>
 </div>
