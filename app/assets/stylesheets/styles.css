@@ -1,5 +1,6 @@
 body {
-  background-image: url('little_triangles.png');
+  /*background-image: url('little_triangles.png');*/
+  font-family: 'Droid Sans', sans-serif;
 }
 
 #container {
@@ -23,5 +24,37 @@ h1 {
   font-weight: bold;
   font-style: italic;
   font-size: 35px;
+  text-shadow: 1px 1px 3px #111;
+}
+
+#content {
+  width: 480px;
+  margin: 0 auto;
+}
+
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  margin: 30px 0;
+  padding: 8px;
+  color: #fff;
+  background-image: url('little_triangles.png');
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-image .5s;
+}
+
+.ghost-button:hover,
+.ghost-button:active {
+  background-image: url('little_triangles_dark.png');
+}
+
+h3 {
+  color: #006127;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
   text-shadow: 1px 1px 3px #111;
 }
