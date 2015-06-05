@@ -1,3 +1,7 @@
+body {
+  background-image: url('little_triangles.png');
+}
+
 #container {
   width: 960px;
   margin: 0 auto;
@@ -14,8 +18,10 @@
 }
 
 h1 {
+  color: #003222;
   font-family: 'Droid Serif', serif;
   font-weight: bold;
   font-style: italic;
   font-size: 35px;
+  text-shadow: 1px 1px 3px #111;
 }
