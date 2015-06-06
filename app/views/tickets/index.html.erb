@@ -1,10 +1,12 @@
 <% content_for(:title, "PCM queue") %>
 
-<div id="content">
+<div id="new_ticket">
   <p>
-    <%= link_to "New Ticket", new_ticket_path, id: "new_link", remote: true %>
+    <%= link_to "New Ticket", new_ticket_path, class: "ghost-button", id: "new_link", remote: true %>
   </p>
+</div>
 
+<div id="content">
   <h3>Active Tickets</h3>
   <div id="incomplete_tickets">
     <%= render @incomplete_tickets %>
