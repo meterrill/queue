@@ -41,12 +41,12 @@ h3 {
   background: #ededed;
 }
 
-#container {
+main {
   width: 960px;
   margin: 0 auto;
 }
 
-#header {
+header {
   text-align: center;
   background-image: url('little_triangles.png');
 }

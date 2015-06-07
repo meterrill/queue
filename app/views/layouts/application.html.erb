@@ -8,18 +8,18 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id="header">
+    <header>
       <%= image_tag("logo.png", id: "logo") %>
       <h1>PCM Queue</h1>
-    </div>
-    
-    <div id="container">
+    </header>
+
+    <main>
 
       <%= flash[:alert] %>
       <%= flash[:notice] %>
 
       <%= yield %>
 
-    </div>
+    </main>
   </body>
 </html>
