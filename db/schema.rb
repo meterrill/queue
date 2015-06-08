@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150602154334) do
   enable_extension "plpgsql"
 
   create_table "tickets", force: :cascade do |t|
-    t.string   "description"
+    t.string   "underwriter"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "complete",    default: false
