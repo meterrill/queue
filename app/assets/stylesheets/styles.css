@@ -41,11 +41,6 @@ h3 {
   background: #ededed;
 }
 
-main {
-  width: 960px;
-  margin: 0 auto;
-}
-
 header {
   text-align: center;
   background-image: url('little_triangles.png');
@@ -57,13 +52,22 @@ header {
   margin: 25px auto 10px;
 }
 
+main {
+  margin: 0 auto;
+  max-width: 75em;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 75em;
+}
+
 #new_ticket {
   text-align: center;
 }
 
-#content {
-  width: 750px;
-  margin: 0 auto;
+#table {
+  margin: 0 5em 5em;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -95,12 +99,15 @@ header {
 
 form {
   padding: 18px;
+}
+
+#table form {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #e0e0e0;
   background: #fafafa;
 }
 
-form:hover {
+#table form:hover {
   background: #f2f2f2;
 }
 
