@@ -30,6 +30,7 @@ class TicketsController < ApplicationController
     @ticket.update(ticket_params)
     respond_to do |format|
       format.html { redirect_to tickets_path }
+      format.json { head :ok }
       format.js
     end
   end

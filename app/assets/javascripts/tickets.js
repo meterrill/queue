@@ -8,4 +8,5 @@ jQuery.fn.submitOnCheck = function() {
 
 $(function() {
   $('.edit_ticket').submitOnCheck();
+  $('.best_in_place').best_in_place();
 });
