@@ -43,7 +43,7 @@ h3 {
 
 header {
   text-align: center;
-  background-image: url('little_triangles.png');
+  background: url('/assets/little_triangles.png');
 }
 
 #logo {
