@@ -11,16 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150602154334) do
+ActiveRecord::Schema.define(version: 20150609191123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "tickets", force: :cascade do |t|
-    t.string   "underwriter"
+    t.string   "uw_name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "complete",    default: false
+    t.boolean  "complete",         default: false
+    t.integer  "loan_number"
+    t.text     "notes"
+    t.boolean  "second_signature", default: false
   end
 
 end
