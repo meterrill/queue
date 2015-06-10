@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 20150609191123) do
     t.string   "uw_name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "complete",         default: false
-    t.integer  "loan_number"
+    t.boolean  "complete",                   default: false
+    t.integer  "loan_number",      limit: 8
     t.text     "notes"
-    t.boolean  "second_signature", default: false
+    t.boolean  "second_signature",           default: false
   end
 
 end

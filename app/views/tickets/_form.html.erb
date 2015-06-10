@@ -1,11 +1,17 @@
 <%= render 'layouts/errors', object: @ticket %>
 
 <%= form_for @ticket, remote: true do |f| %>
-  <%= f.label :uw_name %>
-  <%= f.text_field :uw_name %>
-  <%= f.label :loan_number %>
-  <%= f.text_field :loan_number %>
-  <%= f.label :notes %>
-  <%= f.text_area :notes %>
+  <%= f.label :uw_name do %>
+    <%= content_tag(:span, "UW Name:") %>
+    <%= f.text_field :uw_name %>
+  <% end %>
+  <%= f.label :loan_number do %>
+    <%= content_tag(:span, "Loan Number:") %>
+    <%= f.text_field :loan_number %>
+  <% end %>
+  <%= f.label :notes do %>
+    <%= content_tag(:span, "Notes:") %>
+    <%= f.text_area :notes, :size => "22x10" %>
+  <% end %>
   <%= f.submit %>
 <% end %>
