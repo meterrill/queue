@@ -1,7 +1,11 @@
 <%= render 'layouts/errors', object: @ticket %>
 
 <%= form_for @ticket, remote: true do |f| %>
-  <%= f.label :underwriter %>
-  <%= f.text_field :underwriter %>
+  <%= f.label :uw_name %>
+  <%= f.text_field :uw_name %>
+  <%= f.label :loan_number %>
+  <%= f.text_field :loan_number %>
+  <%= f.label :notes %>
+  <%= f.text_area :notes %>
   <%= f.submit %>
 <% end %>

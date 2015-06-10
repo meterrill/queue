@@ -46,6 +46,8 @@ class TicketsController < ApplicationController
 
 private
   def ticket_params
-    params.require(:ticket).permit(:underwriter, :complete)
+    params.require(:ticket).permit(:uw_name, :complete,
+                                    :loan_number, :notes,
+                                    :second_signature)
   end
 end
