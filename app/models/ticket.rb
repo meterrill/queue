@@ -1,3 +1,3 @@
 class Ticket < ActiveRecord::Base
-  validates :underwriter, :presence => true
+  validates :uw_name, :presence => true
 end
