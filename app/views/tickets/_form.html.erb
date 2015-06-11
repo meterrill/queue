@@ -13,5 +13,9 @@
     <%= content_tag(:span, "Notes:") %>
     <%= f.text_area :notes, :size => "22x10" %>
   <% end %>
+  <%= f.label :notes do %>
+    <%= content_tag(:span, "2nd Signature:") %>
+    <%= f.check_box :second_signature %>
+  <% end %>
   <%= f.submit %>
 <% end %>
