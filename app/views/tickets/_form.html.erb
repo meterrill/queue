@@ -1,6 +1,7 @@
 <%= render 'layouts/errors', object: @ticket %>
 
 <%= form_for @ticket, remote: true do |f| %>
+  <h3>Create Ticket</h3>
   <%= f.label :uw_name do %>
     <%= content_tag(:span, "UW Name:") %>
     <%= f.text_field :uw_name %>
