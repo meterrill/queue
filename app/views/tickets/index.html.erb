@@ -1,23 +1,19 @@
-<% content_for(:title, "PCM queue") %>
+<% content_for(:title, "SOC queue") %>
+
+<p>
+  <%= link_to "New Ticket", new_ticket_path, class: "ghost-button", id: "new_link", remote: true %>
+</p>
 
 <section>
-  <div id="button_ticket">
-    <p>
-      <%= link_to "New Ticket", new_ticket_path, class: "ghost-button", id: "new_link", remote: true %>
-    </p>
-  </div>
-
-  <div class ="table">
     <h3>Active Tickets</h3>
-    <div id="incomplete_tickets">
+    <div class="row" id="incomplete_tickets">
       <%= render @incomplete_tickets %>
     </div>
-  </div>
+</section>
 
-  <div class="table">
+<section>
     <h3>Completed Tickets</h3>
-    <div id="complete_tickets">
+    <div class="row" id="complete_tickets">
       <%= render @complete_tickets %>
     </div>
-  </div>
 </section>

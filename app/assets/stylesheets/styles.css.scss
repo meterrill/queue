@@ -1,10 +1,175 @@
 body {
+  background-color: #fafafa;
   color: #666;
   font-family: 'Droid Sans', sans-serif;
   font-size: 14px;
   text-shadow: 1px 1px 0px #fff;
-  background-color: #fafafa;
-  /*background-image: url('little_triangles_grayscale.png');*/
+}
+
+header {
+  background: asset-data-url('little_triangles.png');
+  text-align: center;
+}
+
+#logo {
+  width: 121px;
+  height: 104px;
+  margin: 25px auto 10px;
+}
+
+h1 {
+  padding-bottom: 20px;
+  color: #003222;
+  font-family: 'Droid Serif', serif;
+  font-size: 35px;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #111;
+}
+
+main {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+section {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 36px 0;
+}
+
+.ghost-button {
+  display: block;
+  width: 200px;
+  padding: 20px;
+  border: 2px solid #003222;
+  border-radius: 3px;
+  margin: 30px auto;
+  color: #003222;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  outline: none;
+  transition: background-color 0.2s,
+              color 0.2s;
+}
+
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #003222;
+  color: #fff;
+  text-decoration: none;
+}
+
+h3 {
+  padding: 12px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #e0e0e0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #ededed;
+  color: #666;
+  font-family: 'Droid Sans', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+#new_ticket {
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+}
+
+label>span {
+  float: left;
+  width: 20%;
+  padding-right: 10px;
+  margin-top: 25px;
+  text-align: right;
+}
+
+input[type="text"] {
+  width: 25%;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #888;
+  line-height: 15px;
+  outline: 0 none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+#new_ticket input[type="text"] {
+  width: 70%;
+  padding: 5px 0 5px 5px;
+  margin: 16px 0;
+}
+
+textarea {
+  width: 70%;
+  padding: 5px 0 5px 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 2px 6px 16px 0;
+  color: #888;
+  font-family: inherit;
+  outline: 0 none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+input[type="checkbox"] {
+  position: relative;
+  vertical-align: bottom;
+  top: -1px;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+#ticket_second_signature {
+  margin-top: 27px;
+}
+
+input[type="submit"] {
+  display: block;
+  clear: both;
+  padding: 10px 25px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  margin: 16px auto;
+  background: #FFF;
+  color: #333;
+}
+
+input[type="submit"]:hover {
+  background-color: #EBEBEB;
+  color: #333;
+  border-color: #ADADAD;
+}
+
+.edit_ticket {
+  padding: 12px;
+  background: #fafafa;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.edit_ticket:hover {
+  background: #f2f2f2;
+}
+
+.edit_ticket:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 a:link,
@@ -19,165 +184,6 @@ a:hover {
   text-decoration: underline;
 }
 
-h1 {
-  color: #003222;
-  font-family: 'Droid Serif', serif;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 35px;
-  text-shadow: 1px 1px 3px #111;
-  padding-bottom: 20px;
-}
-
-h3 {
-  color: #666;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: 1px 1px 0px #fff;
-  padding: 18px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #e0e0e0;
-  background: #ededed;
-}
-
-header {
-  text-align: center;
-  background: asset-data-url('little_triangles.png');
-}
-
-#logo {
-  width: 121px;
-  height: 104px;
-  margin: 25px auto 10px;
-}
-
-main {
-  margin: 0 auto;
-  max-width: 75em;
-}
-
-section {
-  margin: 0 auto;
-  max-width: 75em;
-}
-
-#button_ticket {
-  text-align: center;
-}
-
-.table {
-  margin: 0 5em 5em;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.ghost-button {
-  display: inline-block;
-  width: 200px;
-  margin: 30px 0;
-  padding: 20px;
-  font-weight: bold;
-  font-size: 16px;
-  color: #003222;
-  border: 2px solid #003222;
-  border-radius: 3px;
-  text-shadow: none;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  transition: background-color 0.2s,
-              color 0.2s;
-}
-
-.ghost-button:hover,
-.ghost-button:active {
-  text-decoration: none;
-  background-color: #003222;
-  color: #fff;
-}
-
-form {
-  margin: 0 auto;
-  max-width: 500px;
-  padding: 50px 0;
-  text-align: left;
-}
-
-label {
-  display: block;
-  margin: 0 0 5px;
-}
-
-label>span {
-  float: left;
-  width: 20%;
-  text-align: right;
-  padding-right: 10px;
-  margin-top: 10px;
-}
-
-input[type="text"] {
-  border: 1px solid #ccc;
-  color: #888;
-  height: 20px;
-  line-height: 15px;
-  margin: 2px 6px 16px 0;
-  outline: 0 none;
-  padding: 5px 0 5px 5px;
-  width: 70%;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-
-textarea {
-  border: 1px solid #ccc;
-  color: #888;
-  font-family: inherit;
-  margin: 2px 6px 16px 0;
-  outline: 0 none;
-  padding: 5px 0 5px 5px;
-  width: 70%;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-
-input[type="checkbox"] {
-  margin-top: 12px;
-}
-
-input[type="submit"] {
-  background: #FFF;
-  border: 1px solid #CCC;
-  margin: 15px 0 0 110px;
-  padding: 10px 25px;
-  color: #333;
-  border-radius: 3px;
-}
-
-input[type="submit"]:hover {
-  color: #333;
-  background-color: #EBEBEB;
-  border-color: #ADADAD;
-}
-
-.table form {
-  padding: 16px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #e0e0e0;
-  background: #fafafa;
-}
-
-.table form:hover {
-  background: #f2f2f2;
-}
-
-h3:first-child {
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-}
-
-#complete_tickets>form:last-of-type {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+form a {
+  float: right;
 }
