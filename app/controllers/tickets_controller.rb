@@ -1,6 +1,6 @@
 class TicketsController < ApplicationController
   def index
-    @incomplete_tickets = Ticket.where(complete: false).order('tickets.created_at ASC')
+    @incomplete_tickets = Ticket.where(complete: false).order('tickets.second_signature DESC', 'tickets.created_at ASC')
     @complete_tickets = Ticket.where(complete: true).order('tickets.created_at ASC')
   end
 
