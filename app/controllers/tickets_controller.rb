@@ -10,6 +10,10 @@ class TicketsController < ApplicationController
 
   def new
     @ticket = Ticket.new
+    respond_to do |format|
+      format.html { redirect_to tickets_path }
+      format.js
+    end
   end
 
   def create
