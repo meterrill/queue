@@ -6,8 +6,7 @@ A queuing system built with Ruby on Rails. Allows users to submit a request to t
 
 See it running [here](https://immense-sea-3743.herokuapp.com/).
 
-## User Stories:
-
+### User Stories:
 * ~~As a user I want to create a new ticket.~~
 * ~~As a user I want to edit a ticket.~~
 * ~~As a user I want to mark a ticket completed.~~
@@ -28,7 +27,7 @@ Start the webserver:
 
 `$ rails s`
 
-In your web browser, go to [http://localhost:3000]
+In your web browser, go to http://localhost:3000
 
 
 ## Contribute
